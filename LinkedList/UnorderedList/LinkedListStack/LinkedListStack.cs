@@ -16,22 +16,6 @@ namespace LinkedList.UnorderedList.LinkedListStack
         {
             top = null;
         }
-        //internal void Push<T>(T value)
-        //{
-        //    Node<T> node = new Node<T>(value);
-        //    if (top == null)
-        //    {
-        //        node.next = null;
-        //    }
-        //    else
-        //    {
-        //        node.next = top;
-        //    }
-        //    top = node;
-        //    Console.WriteLine("{0} pushed to stack", value);
-        //}
-
-
         internal void Push(T value)
         {
             Node<T> temp = new Node<T>(value);
