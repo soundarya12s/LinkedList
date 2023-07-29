@@ -6,10 +6,11 @@ namespace LinkedList
     class Program
     {
         static string File = @"D:\gittestrep\LinkedList\LinkedList\UnorderedList\UnorderedList.txt";
+        static string OrderedFilePath = @"D:\gittestrep\LinkedList\LinkedList\OrderedLists\OrderedList.txt";
         static void Main(string[] args)
         {
             bool flag = true;
-            Console.WriteLine("Select an option to proceed: \n 1.LinkedList \n 2.LinkedList Stack\n 3.ListList Queue\n 4.Exit");
+            Console.WriteLine("Select an option to proceed: \n 1.LinkedList \n 2.LinkedList Stack\n 3.ListList Queue\n 4.OrderedList\n5.Exit");
 
             while (flag)
             {
@@ -29,6 +30,10 @@ namespace LinkedList
                         queue.ReadFileAndPerformOperation(File);
                         break;
                     case 4:
+                        Operation operationOrdered = new Operation();
+                        operationOrdered.ReadFileAndPerformOperation(OrderedFilePath);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                     default:
