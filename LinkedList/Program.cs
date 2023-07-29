@@ -9,7 +9,7 @@ namespace LinkedList
         static void Main(string[] args)
         {
             bool flag = true;
-            Console.WriteLine("Select an option to proceed: \n 1.LinkedList \n 2.LinkedList Stack\n 3.ListList Queue\n 4.Exit");
+            Console.WriteLine("Select an option to proceed: \n 1.LinkedList \n 2.LinkedList Stack\n 3.Exit");
 
             while (flag)
             {
@@ -25,12 +25,9 @@ namespace LinkedList
                         stack.ReadFileAndPerformOperation(File);
                         break;
                     case 3:
-                        OperationQueue queue = new OperationQueue();
-                        queue.ReadFileAndPerformOperation(File);
-                        break;
-                    case 4:
                         flag = false;
                         break;
+                   
                     default:
                         flag = false;
                         break;
