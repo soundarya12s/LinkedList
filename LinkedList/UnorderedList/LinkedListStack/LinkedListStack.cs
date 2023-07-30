@@ -81,13 +81,15 @@ namespace LinkedList.UnorderedList.LinkedListStack
             top = top.next;
         }
 
-        internal void IsEmpty()
+        internal bool IsEmpty()
         {
-            while (top != null)
+            if (this.top == null)
             {
-                Peek();
-                Pop();
+                Console.WriteLine("Stack is Empty");
+                return true;
             }
+            else
+                return false;
         }
 
     }

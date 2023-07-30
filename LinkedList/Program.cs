@@ -1,4 +1,6 @@
-﻿using LinkedList.UnorderedList.LinkedListQueue;
+﻿using LinkedList.BalancedParanthesis;
+using LinkedList.UnorderedList.LinkedListQueue;
+using LinkedListProblem.BankingCashCounter;
 using LinkedListProblem.UnorderedList;
 using System;
 namespace LinkedList
@@ -6,6 +8,7 @@ namespace LinkedList
     class Program
     {
         static string File = @"D:\gittestrep\LinkedList\LinkedList\UnorderedList\UnorderedList.txt";
+        static string ParanthesisFile= @"D:\gittestrep\LinkedList\LinkedList\BalancedParanthesis\Paranthesis.txt";
         static string OrderedFilePath = @"D:\gittestrep\LinkedList\LinkedList\OrderedLists\OrderedList.txt";
         static void Main(string[] args)
         {
@@ -34,6 +37,16 @@ namespace LinkedList
                         operationOrdered.ReadFileAndPerformOperation(OrderedFilePath);
                         break;
                     case 5:
+                        Console.WriteLine("Enter amount:");
+                        int amount = Convert.ToInt32(Console.ReadLine());
+                        OperationBanking OpBank = new OperationBanking(amount);
+                        OpBank.AddPersonsInQueue();
+                        break;
+                    case 6:
+                        OperationParanthesis Paranthesis = new OperationParanthesis();
+                        Paranthesis.ReadFileAndPerformOperation(ParanthesisFile);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                     default:
