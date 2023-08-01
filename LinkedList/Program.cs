@@ -1,4 +1,5 @@
 ﻿using LinkedList.BalancedParanthesis;
+using LinkedList.Hashing;
 using LinkedList.UnorderedList.LinkedListQueue;
 using LinkedListProblem.BankingCashCounter;
 using LinkedListProblem.UnorderedList;
@@ -10,6 +11,7 @@ namespace LinkedList
         static string File = @"D:\gittestrep\LinkedList\LinkedList\UnorderedList\UnorderedList.txt";
         static string ParanthesisFile= @"D:\gittestrep\LinkedList\LinkedList\BalancedParanthesis\Paranthesis.txt";
         static string OrderedFilePath = @"D:\gittestrep\LinkedList\LinkedList\OrderedLists\OrderedList.txt";
+        static string HashFile = @"D:\gittestrep\LinkedList\LinkedList\Hashing\Hashingtxt.txt";
         static void Main(string[] args)
         {
             bool flag = true;
@@ -47,7 +49,8 @@ namespace LinkedList
                         Paranthesis.ReadFileAndPerformOperation(ParanthesisFile);
                         break;
                     case 7:
-                        flag = false;
+                        HashingOperation hash = new HashingOperation();
+                        hash.ReadFile(HashFile);
                         break;
                     default:
                         flag = false;

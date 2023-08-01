@@ -56,7 +56,7 @@ namespace LinkedListProblem.BankingCashCounter
 
         private void Deposit()
         {
-            Console.WriteLine("Enter amount to withdraw");
+            Console.WriteLine("Enter amount to Deposit");
             int depositAmount = Convert.ToInt32(Console.ReadLine());
             amount += depositAmount;
         }
@@ -68,7 +68,10 @@ namespace LinkedListProblem.BankingCashCounter
             if (withDrawAmount <= amount)
                 amount -= withDrawAmount;
             else
+            {
                 Console.WriteLine("Insufficient Amount..Please try again later");
+                Deposit();
+            }
             }
     }
     }
