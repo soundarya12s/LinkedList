@@ -3,6 +3,7 @@ using LinkedList.Hashing;
 using LinkedList.UnorderedList.LinkedListQueue;
 using LinkedListProblem.BankingCashCounter;
 using LinkedListProblem.UnorderedList;
+using Regexs;
 using System;
 namespace LinkedList
 {
@@ -51,6 +52,12 @@ namespace LinkedList
                     case 7:
                         HashingOperation hash = new HashingOperation();
                         hash.ReadFile(HashFile);
+                        break;
+                    case 8:
+                        PinCode pin = new PinCode();
+                        Console.WriteLine("enter the pincode");
+                        string pincode = Console.ReadLine();
+                        pin.Validate(pincode);
                         break;
                     default:
                         flag = false;
